@@ -69,19 +69,19 @@ int main() {
     freopen( "palsquare.out", "w", stdout );
     int B, i;
     scanf( "%d", &B );
-    string str, a;
+    string origin, square;
     for ( i = 1; i <= N; ++i ) {
         int n = pow( i, 2 );
-        str = convert( n, B );
+        square = convert( n, B );
         if ( check( str ) ) {
-            a = convert( i, B );
+            origin = convert( i, B );
             if ( B >= 10 ) {
-                a = fix( a, B % 10 );
-                str = fix( str, B % 10 );
+                origin = fix( a, B % 10 );
+                square = fix( str, B % 10 );
             }
-            printString( a );
+            printString( origin );
             printf( " " );
-            printString( str );
+            printString( square );
             printf( "\n" );
         }
     }
